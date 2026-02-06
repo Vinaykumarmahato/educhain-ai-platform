@@ -1,0 +1,58 @@
+
+/*
+ * Express Gateway / BFF Implementation
+ * Acts as a proxy and security layer for the React Frontend.
+ */
+
+const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+const jwt = require('jsonwebtoken');
+const morgan = require('morgan');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+const SPRING_BOOT_URL = process.env.SPRING_BOOT_URL || 'http://localhost:8080';
+
+// Logging
+app.use(morgan('combined'));
+
+// Auth Middleware
+const authenticateToken = (req, res, next) => {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) return res.sendStatus(401);
+
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    if (err) return res.sendStatus(403);
+    req.user = user;
+    next();
+  });
+};
+
+// BFF Proxy Logic: Forwards frontend requests to Spring Boot
+app.use('/api', createProxyMiddleware({
+  target: SPRING_BOOT_URL,
+  changeOrigin: true,
+  pathRewrite: {
+    '^/api': '/api/v1', // rewrites path
+  },
+  onProxyReq: (proxyReq, req, res) => {
+    // Inject service-to-service secrets or transform headers if needed
+    if (req.user) {
+        proxyReq.setHeader('X-Authenticated-User', req.user.username);
+    }
+  }
+}));
+
+// Serve static assets from the React build folder
+app.use(express.static(path.join(__dirname, 'dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`BFF Gateway running on port ${PORT}`);
+});

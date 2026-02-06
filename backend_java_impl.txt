@@ -1,0 +1,81 @@
+
+/* 
+ * This is a reference implementation of the Spring Boot Backend Layer
+ * File: src/main/java/edu/educhain/student/controller/StudentController.java
+ */
+
+package edu.educhain.student.controller;
+
+import edu.educhain.student.model.Student;
+import edu.educhain.student.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/v1/students")
+public class StudentController {
+
+    @Autowired
+    private StudentService studentService;
+
+    @GetMapping
+    @PreAuthorize("hasAnyRole('ADMIN', 'TEACHER')")
+    public ResponseEntity<Page<Student>> getAllStudents(
+            @RequestParam(required = false) String search,
+            Pageable pageable) {
+        return ResponseEntity.ok(studentService.findAll(search, pageable));
+    }
+
+    @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
+        return ResponseEntity.ok(studentService.save(student));
+    }
+
+    @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'TEACHER')")
+    public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
+        return studentService.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+}
+
+/* 
+ * Persistence Entity
+ * File: src/main/java/edu/educhain/student/model/Student.java
+ */
+
+@Entity
+@Table(name = "students")
+@Data
+public class Student {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false)
+    private String studentId;
+
+    @NotBlank
+    private String firstName;
+    
+    @NotBlank
+    private String lastName;
+
+    @Email
+    private String email;
+
+    @Enumerated(EnumType.STRING)
+    private StudentStatus status;
+
+    private Double gpa;
+
+    @ManyToOne
+    @JoinColumn(name = "major_id")
+    private Department major;
+}

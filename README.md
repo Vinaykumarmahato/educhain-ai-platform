@@ -1,172 +1,147 @@
-# EduChain Enterprise SMS (Smart Management System)
-
 <div align="center">
-  <img src="https://ui-avatars.com/api/?name=EduChain&background=4F46E5&color=fff&size=128&length=2" alt="EduChain Logo" width="100">
-  <h1>EduChain Enterprise</h1>
-  <p><strong>Next-Generation AI-Powered Institutional Management Platform</strong></p>
 
-  [![React](https://img.shields.io/badge/React-19.2.4-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
-  [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.2-green?style=for-the-badge&logo=spring)](https://spring.io/projects/spring-boot)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.x-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-  [![Google Gemini](https://img.shields.io/badge/AI-Gemini%201.5%20Flash-orange?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
-  [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=280&section=header&text=EduChain%20Enterprise&fontSize=80&animation=fadeIn&fontAlignY=35&desc=Next-Gen%20AI-Powered%20Institutional%20Management%20Platform&descAlignY=55&descAlign=50" alt="EduChain Header" width="100%">
+
+  <br />
+
+  [![React](https://img.shields.io/badge/React-19.2.4-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+  [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.2-6DB33F?style=for-the-badge&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Google Gemini](https://img.shields.io/badge/AI-Gemini_1.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+  [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+
+  <br />
+
+  [![GitHub stars](https://img.shields.io/github/stars/Vinaykumarmahato/educhain-ai-platform?style=social)](https://github.com/Vinaykumarmahato/educhain-ai-platform/stargazers)
+  [![GitHub forks](https://img.shields.io/github/forks/Vinaykumarmahato/educhain-ai-platform?style=social)](https://github.com/Vinaykumarmahato/educhain-ai-platform/network/members)
+  [![GitHub issues](https://img.shields.io/github/issues/Vinaykumarmahato/educhain-ai-platform?style=social)](https://github.com/Vinaykumarmahato/educhain-ai-platform/issues)
+  [![GitHub license](https://img.shields.io/github/license/Vinaykumarmahato/educhain-ai-platform?style=social)](https://github.com/Vinaykumarmahato/educhain-ai-platform)
+
 </div>
+
+<br />
 
 ---
 
 ## 🚀 About The Project
 
-EduChain Enterprise SMS is a cutting-edge, full-stack educational management platform designed to streamline institutional operations while leveraging Artificial Intelligence for student success. Unlike traditional monolithic ERPs, EduChain uses a modern microservices-ready architecture with a clean, glassmorphic UI.
+**EduChain Enterprise SMS** is a cutting-edge, full-stack educational management platform designed to streamline institutional operations while leveraging **Artificial Intelligence** for student success. Unlike traditional monolithic ERPs, EduChain uses a modern microservices-ready architecture with a clean, **glassmorphic UI**.
 
-**Key Differentiator:** Built-in AI intervention system that analyzes student performance (grades, attendance) to generate personalized "Recovery Roadmaps" using **Google's Gemini 1.5 Flash** model.
+> 💡 **Key Differentiator:** Our built-in **AI Intervention System** analyzes student performance (grades, attendance) to generate personalized "Recovery Roadmaps" using **Google's Gemini 1.5 Flash** model.
 
-## 🌟 Comprehensive Feature List
+<br />
 
-### � 1. AI-Driven Decision Support
-*   **Predictive Success Analytics**: Automatically calculates student risk levels (Low/Medium/High) based on real-time academic and attendance data.
-*   **Generative Intervention Plans**: Uses Google Gemini 1.5 Flash to synthesize detailed, personalized recovery roadmaps for at-risk students.
-*   **Role-Based Cognitive Insights**:
-    *   **Admins**: Receive system-wide health and resource optimization tips.
-    *   **Teachers**: Get class performance summaries and "student-at-risk" alerts.
-    *   **Students**: Receive personalized study tips and deadline reminders.
+## 🌟 Key Features
 
-### 🔐 2. Enterprise-Grade Security & Authentication
-*   **Secure Authentication**: Robust implementation using Spring Security 6.
-*   **JWT (JSON Web Tokens)**: Stateless session management for scalability.
-*   **RBAC (Role-Based Access Control)**: Strictly enforced permissions for `ADMIN`, `TEACHER`, and `STUDENT` roles.
-*   **Password Encryption**: Industry-standard BCrypt hashing.
-*   **Persistent User Profiles**:
-    *   Secure editing of personal details (Name, Email).
-    *   Profile picture management with **Cloudinary** integration.
-    *   Changes persisted directly to MySQL database.
+| 🤖 **AI-Driven Intelligence** | 🔐 **Enterprise Security** |
+|:-----------------------------|:--------------------------|
+| • **Predictive Analytics:** Calculates student risk levels (Low/Medium/High).<br>• **Smart Intervention:** Generates personalized study plans via Gemini AI.<br>• **Cognitive Insights:** Role-based tips for Admins, Teachers, & Students. | • **Spring Security 6:** Robust, industry-standard protection.<br>• **JWT Auth:** Stateless, scalable session management.<br>• **RBAC:** Strict roles for `ADMIN`, `TEACHER`, `STUDENT`.<br>• **Encrypted:** BCrypt password hashing. |
 
-### 📊 3. Interactive Dashboards
-*   **Real-Time Statistics**: Live counters for Total Students, Active Faculty, Courses, and Average GPA.
-*   **Data Visualization**:
-    *   **Branch Distribution**: Interactive pie charts showing student enrollment per department.
-    *   **Performance Trends**: Visual graphs for GPA tracking (powered by `recharts`).
-*   **Recent Activity Feed**: Live tracking of new enrollments and system updates.
+| 📊 **Interactive Dashboards** | 👥 **Academic Management** |
+|:-----------------------------|:--------------------------|
+| • **Live Stats:** Real-time counters for students, faculty, & courses.<br>• **Visual Trends:** GPA tracking graphs & enrollment pie charts.<br>• **Activity Feed:** Live updates on system events. | • **Student Lifecycle:** Enrollment, profiles, & history.<br>• **Faculty Hub:** Digital staff directory & workload.<br>• **Course Co-ordination:** Curriculum & credit management. |
 
-### 👥 4. Academic Management Modules
-*   **Student Management**:
-    *   Complete lifecycle management (Enrollment, Status Updates).
-    *   Advanced filtering by Branch, Semester, and Status.
-    *   Detailed student profiles with academic history.
-*   **Faculty Administration**:
-    *   Staff directory with designation and department tracking.
-    *   Workload management and contact details.
-*   **Course Coordination**:
-    *   Course creation, credit assignment, and instructor mapping.
-    *   Department-specific curriculum organization.
+| 📅 **Attendance & Grades** | 🔔 **Smart Communication** |
+|:--------------------------|:--------------------------|
+| • **Digital Register:** Subject-wise & date-wise tracking.<br>• **Centralized Marks:** Semester-wise aggregation.<br>• **Status Tracking:** Present, Absent, Late indicators. | • **Notification Center:** Real-time academic alerts.<br>• **Read Receipts:** Track acknowledged messages.<br>• **Auto-Alerts:** Triggers for consecutive absenteeism. |
 
-### 📅 5. Attendance & Performance Tracking
-*   **Digital Attendance Register**:
-    *   Date-wise and Subject-wise attendance marking.
-    *   Status tracking (Present, Absent, Late).
-*   **Grades & Assessment**:
-    *   Centralized repository for student marks.
-    *   Semester-wise performance aggregation.
+<br />
 
-### 🔔 6. Communication & Notifications
-*   **System Alerts**: Built-in notification center for academic updates.
-*   **Read/Unread Status**: Track acknowledged notifications.
-*   **Absenteeism Alerts**: Automated triggers for consecutive absences.
+## 💻 Modern UI/UX Engineering
 
-### 💻 7. Modern UI/UX Engineering
-*   **Glassmorphism Design**: Sleek, modern aesthetic using translucent layers and blur effects.
-*   **Responsive Layout**: Fully mobile-responsive sidebar, tables, and cards using **Tailwind CSS v4**.
-*   **Smooth Animations**: Page transitions and interactive elements using `animate.css` and CSS transitions.
-*   **Global Search**: powerful search bar to check ID, Modules, or Faculties.
+*   ✨ **Glassmorphism Design:** A sleek, modern aesthetic using translucent layers.
+*   📱 **Fully Responsive:** Mobile-first approach with **Tailwind CSS v4**.
+*   🎨 **Smooth Animations:** Interactive elements using `animate.css`.
+*   🔍 **Global Search:** Powerful search bar for instant access to any record.
+
+<br />
 
 ## 🛠️ Technology Stack
 
-### Frontend (Client-Side)
-- **Framework**: React 19 (Vite)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4, PostCSS
-- **State Management**: React Hooks & Context API
-- **Visualization**: Recharts
-- **AI Integration**: Google Generative AI SDK (`@google/generative-ai`)
-- **HTTP Client**: Axios with Interceptors
+### **Frontend (Client-Side)**
+*   ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) **React 19 (Vite)**
+*   ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) **TypeScript**
+*   ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) **Tailwind CSS v4**
+*   ![Google Gemini](https://img.shields.io/badge/Google_AI-4285F4?style=flat&logo=google&logoColor=white) **Gemini SDK**
+*   ![Recharts](https://img.shields.io/badge/Recharts-22b5bf?style=flat) **Data Visualization**
 
-### Backend (Server-Side)
-- **Framework**: Spring Boot 3.4.2 (Java 21)
-- **Security**: Spring Security, JWT (JSON Web Tokens)
-- **Database**: MySQL 8.0 (Hibernate/JPA)
-- **API Documentation**: RESTful Architecture
-- **Build Tool**: Maven
+### **Backend (Server-Side)**
+*   ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring&logoColor=white) **Spring Boot 3.4.2**
+*   ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white) **Java 21**
+*   ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=flat&logo=mysql&logoColor=white) **MySQL 8.0**
+*   ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat&logo=hibernate&logoColor=white) **JPA / Hibernate**
+*   ![JWT](https://img.shields.io/badge/JWT-black?style=flat&logo=json%20web%20tokens) **JSON Web Tokens**
+
+<br />
 
 ## 📦 Installation & Setup
 
 ### Prerequisites
-- Node.js (v18+)
-- Java JDK 21
-- MySQL Server
-- Google Gemini API Key
-- Cloudinary Account (for image uploads)
+*   Node.js (v18+)
+*   Java JDK 21
+*   MySQL Server
+*   Google Gemini API Key
+*   Cloudinary Account
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/educhain-sms.git
-cd educhain-sms
+git clone https://github.com/Vinaykumarmahato/educhain-ai-platform.git
+cd educhain-ai-platform
 ```
 
 ### 2. Backend Setup
-1. Navigate to the backend directory:
-   ```bash
-   cd backend-java
-   ```
-2. Configure database in `src/main/resources/application.properties`:
-   ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/educhain_sms
-   spring.datasource.username=root
-   spring.datasource.password=YOUR_PASSWORD
-   ```
-3. Run the application:
-   ```bash
-   mvn spring-boot:run
-   ```
+```bash
+cd backend-java
+# Configure src/main/resources/application.properties with your DB credentials
+mvn spring-boot:run
+```
 
 ### 3. Frontend Setup
-1. Navigate to the project root (if not already there):
-   ```bash
-   cd ..
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create `.env.local` file:
-   ```bash
-   VITE_GEMINI_API_KEY=your_gemini_api_key
-   VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name
-   VITE_CLOUDINARY_API_KEY=your_api_key
-   VITE_CLOUDINARY_API_SECRET=your_api_secret
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
+```bash
+cd ..
+npm install
+# Create .env.local with your VITE_GEMINI_API_KEY and Cloudinary credentials
+npm run dev
+```
 
-## 🖥️ Usage
+<br />
 
-1. **Login**: Access the portal at `http://localhost:3000`.
-   - **Default Admin**: `admin` / `admin123` (Ensure database is seeded).
-2. **Dashboard**: View high-level stats.
-3. **Success Analytics**: Navigate to the analytics tab to test the AI intervention generation.
-4. **Profile**: Update your avatar and personal details (persisted to DB).
+## 🖥️ Usage Guide
+
+1.  **Login Portal**: Access at `http://localhost:3000`.
+    *   *Default Admin Credentials*: `admin` / `admin123`
+2.  **Dashboard**: Explore high-level insights.
+3.  **AI Analytics**: Test the "Recovery Roadmap" generation in the Analytics tab.
+4.  **Profile**: Update your digital avatar via Cloudinary.
+
+<br />
 
 ## 🔮 Future Roadmap
-- [ ] Integration with Learning Management Systems (LMS).
-- [ ] Automated SMS/Email notifications for attendance.
-- [ ] Blockchain-based certificate issuance (EduChain Core).
-- [ ] Mobile App (React Native).
+*   [ ] 📱 **Mobile App (React Native)**
+*   [ ] 🔗 **LMS Integration (Canvas/Moodle)**
+*   [ ] ⛓️ **Blockchain Certificate Issuance**
+*   [ ] 📨 **SMS/WhatsApp Notifications**
+
+<br />
 
 ## 🤝 Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+<br />
 
 ---
-**Developed with ❤️ by Vinay Kumar Mahato**
+
+<div align="center">
+
+  **Developed with ❤️ by [Vinay Kumar Mahato](https://github.com/Vinaykumarmahato)**
+
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Vinaykumarmahato)
+
+</div>

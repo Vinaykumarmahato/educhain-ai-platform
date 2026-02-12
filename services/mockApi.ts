@@ -220,9 +220,27 @@ export const mockApi = {
   },
 
   getGrades: async (user: User) => {
-    // Assuming we fetch grades for the logged in user or context
-    const response = await api.get(`/grades/student/1`); // Hardcoded student id for demo
-    return response.data;
+    try {
+      let url = '/grades';
+      if (user.role === UserRole.STUDENT) {
+        url = `/grades/student/${user.username}`;
+      }
+
+      const response = await api.get(url);
+      return (response.data || []).map((g: any) => ({
+        id: g.id?.toString() || 'temp',
+        studentId: g.student?.studentId || 'N/A',
+        studentName: g.student ? `${g.student.firstName} ${g.student.lastName}` : 'Unknown',
+        courseName: g.course?.name || 'Unknown Course',
+        grade: g.grade,
+        score: g.marks !== undefined ? g.marks : g.score,
+        semester: g.semester ? `Semester ${g.semester}` : 'Spring 2024',
+        department: g.student?.major?.name || 'Unassigned'
+      }));
+    } catch (error) {
+      console.error('Failed to fetch grades', error);
+      return [];
+    }
   },
 
   createGrade: async (g: any) => {

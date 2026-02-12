@@ -17,9 +17,15 @@ public class GradeController {
         this.gradeService = gradeService;
     }
 
+    @GetMapping
+    public ResponseEntity<List<Grade>> getAllGrades() {
+        return ResponseEntity.ok(gradeService.findAll());
+    }
+
     @GetMapping("/student/{id}")
-    public ResponseEntity<List<Grade>> getGradesByStudent(@PathVariable Long id) {
-        return ResponseEntity.ok(gradeService.findByStudent(id));
+    public ResponseEntity<List<Grade>> getGradesByStudent(@PathVariable String id) {
+        // If numeric, could try converting, but primary use is StudentID string from frontend
+        return ResponseEntity.ok(gradeService.findByStudentId(id));
     }
 
     @PostMapping

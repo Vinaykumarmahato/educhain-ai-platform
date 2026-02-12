@@ -25,8 +25,16 @@ public class GradeService {
         this.courseRepository = courseRepository;
     }
 
+    public List<Grade> findAll() {
+        return gradeRepository.findAll();
+    }
+
     public List<Grade> findByStudent(Long studentId) {
         return gradeRepository.findByStudentId(studentId);
+    }
+
+    public List<Grade> findByStudentId(String studentId) {
+        return gradeRepository.findByStudent_StudentId(studentId);
     }
 
     public Grade save(GradeDTO dto) {
